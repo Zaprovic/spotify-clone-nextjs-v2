@@ -5,7 +5,7 @@ import SidebarSection from "./sidebar-section";
 
 const Sidebar = () => {
 	return (
-		<aside className="w-[360px] flex flex-col gap-2">
+		<aside className="flex flex-col gap-2 h-full mr-2">
 			<SidebarHeader />
 			<SidebarSection />
 		</aside>

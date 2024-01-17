@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.311.0",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "react-resizable-panels": "^1.0.9"
   },
   "devDependencies": {
     "typescript": "^5",
