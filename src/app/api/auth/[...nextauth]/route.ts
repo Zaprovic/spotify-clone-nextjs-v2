@@ -1,12 +1,6 @@
 import { AuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
-import Github from "next-auth/providers/github";
-
-// export async function GET(req: Request) {
-// 	return NextResponse.json({
-// 		message: "Next auth configured",
-// 	});
-// }
+import Google from "next-auth/providers/google";
 
 const clientId = process.env.GOOGLE_ID;
 const clientSecret = process.env.GOOGLE_SECRET;
@@ -17,7 +11,7 @@ if (!clientId || !clientSecret) {
 
 const authOptions: AuthOptions = {
 	providers: [
-		Github({
+		Google({
 			clientId,
 			clientSecret,
 		}),

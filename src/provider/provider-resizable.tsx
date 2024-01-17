@@ -1,7 +1,7 @@
 "use client";
 
-import ContentHeader from "@/components/content/content-header";
-import Sidebar from "@/components/sidebar/sidebar";
+import ContentHeader from "@/components/page-main/content/content-header";
+import Sidebar from "@/components/page-main/sidebar/sidebar";
 import {
 	ResizableHandle,
 	ResizablePanel,

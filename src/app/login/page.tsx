@@ -1,3 +1,4 @@
+import LoginButton from "@/components/page-install/login-button";
 import AppleIcon from "@/icons/apple-icon";
 import FacebookIconColor from "@/icons/facebook-icon-color";
 import GoogleIcon from "@/icons/google-icon";
@@ -19,12 +20,9 @@ const LoginPage = () => {
 					</h2>
 
 					<div className="flex flex-col gap-3 mt-8 md:px-4">
-						<button className="flex gap-2 border border-neutral-400 hover:border-neutral-100 pl-8 py-3 items-center px-5 rounded-full">
+						<LoginButton name="Google">
 							<GoogleIcon />
-							<h5 className="flex-1 w-full text-center font-bold">
-								Continue with Google
-							</h5>
-						</button>
+						</LoginButton>
 						<button className="flex gap-2 border border-neutral-400 hover:border-neutral-100 pl-8 py-3 items-center px-5 rounded-full">
 							<FacebookIconColor />
 							<h5 className="flex-1 w-full text-center font-bold">
