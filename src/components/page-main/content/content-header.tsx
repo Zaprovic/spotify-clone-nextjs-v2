@@ -8,59 +8,59 @@ import ContentHeaderNavigation from "./content-header-navigation";
 // todo: handle better when image is undefined
 
 const ContentHeader = () => {
-	const { data: session } = useSession();
-	return (
-		<header
-			className={`flex items-center justify-between w-full ${
-				!session ? "py-2" : "py-4"
-			} pl-6 pr-4 bg-neutral-950`}
-		>
-			<ContentHeaderNavigation />
+    const { data: session } = useSession();
+    return (
+        <header
+            className={`flex w-full items-center justify-between ${
+                !session ? "py-2" : "py-4"
+            } bg-neutral-900 pl-6 pr-4`}
+        >
+            <ContentHeaderNavigation />
 
-			{session && session.user?.image ? (
-				<nav className="flex gap-2">
-					<Link
-						href={"/install"}
-						className="flex items-center justify-center gap-2 font-bold text-sm bg-neutral-900 py-1 px-3 rounded-full hover:scale-105 transition-all"
-					>
-						<InstallIcon />
-						<span>Install App</span>
-					</Link>
+            {session && session.user?.image ? (
+                <nav className="flex gap-2">
+                    <Link
+                        href={"/install"}
+                        className="flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-3 py-1 text-sm font-bold transition-all hover:scale-105"
+                    >
+                        <InstallIcon />
+                        <span>Install App</span>
+                    </Link>
 
-					<Link
-						href={"/notifications"}
-						className="bg-neutral-900 p-2 rounded-full hover:scale-105 transition-all"
-					>
-						<NotificationsIcon />
-					</Link>
+                    <Link
+                        href={"/notifications"}
+                        className="rounded-full bg-neutral-950 p-2 transition-all hover:scale-105"
+                    >
+                        <NotificationsIcon />
+                    </Link>
 
-					<button>
-						<figure className="bg-neutral-900 hover:bg-black hover:scale-105 transition-all p-1 rounded-full">
-							<Image
-								src={session.user?.image}
-								alt="Profile picture"
-								width={24}
-								height={24}
-								className="object-cover rounded-full"
-							/>
-						</figure>
-					</button>
-				</nav>
-			) : (
-				<div className="flex gap-8 font-bold">
-					<button className="text-neutral-400 hover:scale-105 hover:text-neutral-100 hover:font-extrabold transition-all">
-						Sign up
-					</button>
-					<Link
-						href={"/login"}
-						className="bg-neutral-100 py-3 px-8 rounded-full text-neutral-950 hover:scale-105 hover:font-extrabold transition-all"
-					>
-						<button>Log in</button>
-					</Link>
-				</div>
-			)}
-		</header>
-	);
+                    <button>
+                        <figure className="rounded-full bg-neutral-950 p-1 transition-all hover:scale-105 hover:bg-black">
+                            <Image
+                                src={session.user?.image}
+                                alt="Profile picture"
+                                width={24}
+                                height={24}
+                                className="rounded-full object-cover"
+                            />
+                        </figure>
+                    </button>
+                </nav>
+            ) : (
+                <div className="flex gap-8 font-bold">
+                    <button className="text-neutral-400 transition-all hover:scale-105 hover:font-extrabold hover:text-neutral-100">
+                        Sign up
+                    </button>
+                    <Link
+                        href={"/login"}
+                        className="rounded-full bg-neutral-100 px-8 py-3 text-neutral-950 transition-all hover:scale-105 hover:font-extrabold"
+                    >
+                        <button>Log in</button>
+                    </Link>
+                </div>
+            )}
+        </header>
+    );
 };
 
 export default ContentHeader;
