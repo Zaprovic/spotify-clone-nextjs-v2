@@ -12,7 +12,7 @@ import { ReactNode } from "react";
 const ProviderResizable = ({ children }: { children: ReactNode }) => {
 	return (
 		<ResizablePanelGroup direction="horizontal" className="flex flex-1 ">
-			<ResizablePanel defaultSize={35}>
+			<ResizablePanel defaultSize={25}>
 				<Sidebar />
 			</ResizablePanel>
 			<ResizableHandle withHandle className="w-2 bg-black" />

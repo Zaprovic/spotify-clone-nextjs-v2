@@ -1,7 +1,6 @@
-import ProviderResizable from "@/provider/provider-resizable";
+import "@/styles/login-page.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +16,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body>
-				<div id="app">
-					<ProviderResizable>{children}</ProviderResizable>
-					<section className="p-2">Bottom section</section>
-				</div>
-			</body>
+			<body className="bg-black md:bg-neutral-900">{children}</body>
 		</html>
 	);
 }
