@@ -7,7 +7,7 @@ import FooterList from "./footer-list";
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col bg-inherit px-6 pb-20">
+        <footer className="flex flex-col bg-inherit px-6 pb-32 pt-44">
             <div className="flex items-start justify-between">
                 <div className="flex gap-32">
                     <FooterList title="Company">

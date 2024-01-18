@@ -18,10 +18,10 @@ const ProviderResizable = ({ children }: { children: ReactNode }) => {
             <ResizableHandle withHandle className="w-0 bg-black" />
             <ResizablePanel
                 defaultSize={75}
-                className="flex flex-col overflow-hidden rounded-lg"
+                className="flex flex-col rounded-lg"
             >
                 <ContentHeader />
-                <main className="flex-1 bg-cyan-900">{children}</main>
+                <main className="h-full overflow-scroll">{children}</main>
             </ResizablePanel>
         </ResizablePanelGroup>
     );
