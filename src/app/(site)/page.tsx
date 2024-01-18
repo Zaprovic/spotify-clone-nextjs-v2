@@ -1,3 +1,9 @@
+import GreetingTitle from "@/components/page-main/greeting-title";
+
 export default function Home() {
-    return <div className="h-full w-full bg-blue-600">main content</div>;
+    return (
+        <div className="h-full w-full bg-neutral-900 px-6 py-2">
+            <GreetingTitle />
+        </div>
+    );
 }
