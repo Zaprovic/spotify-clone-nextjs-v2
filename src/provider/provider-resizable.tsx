@@ -21,7 +21,7 @@ const ProviderResizable = ({ children }: { children: ReactNode }) => {
                 className="flex flex-col rounded-lg"
             >
                 <ContentHeader />
-                <main className="h-full overflow-scroll">{children}</main>
+                <main className="h-full">{children}</main>
             </ResizablePanel>
         </ResizablePanelGroup>
     );
