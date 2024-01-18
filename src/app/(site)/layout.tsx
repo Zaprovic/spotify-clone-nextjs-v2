@@ -1,4 +1,7 @@
 import "@/app/globals.css";
+import CurrentSong from "@/components/player-section/current-song";
+import PlayerMusic from "@/components/player-section/player-music";
+import PlayerPlanel from "@/components/player-section/player-panel";
 import ProviderResizable from "@/provider/provider-resizable";
 import ProviderSession from "@/provider/provider-session";
 import type { Metadata } from "next";
@@ -21,7 +24,11 @@ export default function RootLayout({
                 <body>
                     <div id="app">
                         <ProviderResizable>{children}</ProviderResizable>
-                        <section className="p-2">Bottom section</section>
+                        <section className="flex justify-between p-4">
+                            <CurrentSong />
+                            <PlayerMusic />
+                            <PlayerPlanel />
+                        </section>
                     </div>
                 </body>
             </html>

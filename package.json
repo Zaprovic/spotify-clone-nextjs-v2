@@ -10,13 +10,15 @@
   },
   "dependencies": {
     "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-slider": "^1.1.2",
     "clsx": "2.1.0",
     "lucide-react": "0.311.0",
     "next": "14.0.4",
     "next-auth": "4.24.5",
     "react": "18",
     "react-dom": "18",
-    "react-resizable-panels": "1.0.9"
+    "react-resizable-panels": "1.0.9",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@types/node": "20",

@@ -1,5 +1,3 @@
-"use client";
-
 import ContentHeader from "@/components/page-main/content/content-header";
 import Sidebar from "@/components/page-main/sidebar/sidebar";
 import {
@@ -11,7 +9,10 @@ import { ReactNode } from "react";
 
 const ProviderResizable = ({ children }: { children: ReactNode }) => {
     return (
-        <ResizablePanelGroup direction="horizontal" className="flex flex-1">
+        <ResizablePanelGroup
+            direction="horizontal"
+            className="flex flex-1 bg-blue-700"
+        >
             <ResizablePanel defaultSize={25}>
                 <Sidebar />
             </ResizablePanel>

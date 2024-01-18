@@ -17,7 +17,7 @@ import ContentHeaderNavigation from "./content-header-navigation";
 const ContentHeader = () => {
     const { data: session } = useSession();
 
-    console.log(session);
+    // console.log(session);
     return (
         <header
             className={`flex w-full items-center justify-between ${
