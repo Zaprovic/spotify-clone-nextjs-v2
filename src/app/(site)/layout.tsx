@@ -24,7 +24,7 @@ export default function RootLayout({
                 <body>
                     <div id="app">
                         <ProviderResizable>{children}</ProviderResizable>
-                        <section className="flex justify-between p-4">
+                        <section className="flex justify-between p-3">
                             <CurrentSong />
                             <PlayerMusic />
                             <PlayerPlanel />

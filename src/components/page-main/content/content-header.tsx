@@ -1,16 +1,11 @@
 "use client";
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover";
 import InstallIcon from "@/icons/install-icon";
-import More from "@/icons/more";
 import NotificationsIcon from "@/icons/notifications-icon";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import ContentHeaderNavigation from "./content-header-navigation";
+import ContentHeaderPopup from "./content-header-popup";
 
 // todo : handle user image better in the future
 
@@ -43,7 +38,21 @@ const ContentHeader = () => {
                         <NotificationsIcon />
                     </Link>
 
-                    <Popover>
+                    <ContentHeaderPopup>
+                        <button>
+                            <figure className="rounded-full bg-neutral-950 p-1 transition-all hover:scale-105 hover:bg-black">
+                                <Image
+                                    src={session.user?.image}
+                                    alt="Profile picture"
+                                    width={24}
+                                    height={24}
+                                    className="rounded-full object-cover"
+                                />
+                            </figure>
+                        </button>
+                    </ContentHeaderPopup>
+
+                    {/* <Popover>
                         <PopoverTrigger asChild>
                             <button>
                                 <figure className="rounded-full bg-neutral-950 p-1 transition-all hover:scale-105 hover:bg-black">
@@ -84,7 +93,7 @@ const ContentHeader = () => {
                                 </li>
                             </ul>
                         </PopoverContent>
-                    </Popover>
+                    </Popover> */}
                 </nav>
             ) : (
                 <div className="flex gap-8 font-bold">
