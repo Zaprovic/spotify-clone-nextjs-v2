@@ -2,6 +2,7 @@ import "@/app/globals.css";
 import CurrentSong from "@/components/player-section/current-song";
 import PlayerMusic from "@/components/player-section/player-music";
 import PlayerPlanel from "@/components/player-section/player-panel";
+import { CircularStd } from "@/font-loader";
 import ProviderResizable from "@/provider/provider-resizable";
 import ProviderSession from "@/provider/provider-session";
 import type { Metadata } from "next";
@@ -21,7 +22,7 @@ export default function RootLayout({
     return (
         <ProviderSession>
             <html lang="en">
-                <body>
+                <body className={CircularStd.className}>
                     <div id="app">
                         <ProviderResizable>{children}</ProviderResizable>
                         <section className="flex justify-between p-3">
