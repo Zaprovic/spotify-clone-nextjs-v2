@@ -16,7 +16,7 @@ const LoginPage = () => {
             </header>
 
             <main className="px-8 py-10">
-                <section className="mx-auto max-w-[736px] bg-black md:rounded-lg md:px-48 md:py-16">
+                <section className="mx-auto max-w-[736px] bg-black md:rounded-lg md:px-44 md:py-[4.5rem]">
                     <h2 className="text-3xl font-bold -tracking-wider md:pb-6 md:text-center md:text-5xl">
                         Log in to Spotify
                     </h2>
@@ -58,7 +58,7 @@ const LoginPage = () => {
                     <p className="mt-16 flex w-full justify-center gap-1">
                         <span>Don&apos;t have an account? </span>
                         <Link
-                            href={"#"}
+                            href={"/signup"}
                             className=" transition-all hover:text-green-500 hover:underline"
                         >
                             Sign up for Spotify
