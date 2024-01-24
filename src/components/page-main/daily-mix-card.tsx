@@ -24,7 +24,7 @@ const DailyMixCard = () => {
                 <div
                     className={`absolute bottom-0 right-[-2px] z-10 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100`}
                 >
-                    <PlayButton />
+                    <PlayButton className="absolute bottom-24 right-5 p-3" />
                 </div>
             </article>
         </Link>

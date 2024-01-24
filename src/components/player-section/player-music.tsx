@@ -18,7 +18,7 @@ const PlayerMusic = () => {
                 </button>
 
                 <PlayButton
-                    styles="bg-white rounded-full p-2 transition-all hover:scale-105"
+                    className="rounded-full bg-white p-2 transition-all hover:scale-105"
                     width={16}
                     height={16}
                 />

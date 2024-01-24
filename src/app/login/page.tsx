@@ -1,8 +1,10 @@
 import LoginButton from "@/components/page-install/login-button";
+import LoginForm from "@/components/page-install/login-form";
 import AppleIcon from "@/icons/apple-icon";
 import FacebookIconColor from "@/icons/facebook-icon-color";
 import GoogleIcon from "@/icons/google-icon";
 import SpotifyIcon from "@/icons/spotify-icon";
+import Link from "next/link";
 
 const LoginPage = () => {
     return (
@@ -13,14 +15,14 @@ const LoginPage = () => {
                 </div>
             </header>
 
-            <main className="px-8 pt-10">
-                <section className="mx-auto max-w-[736px] bg-black md:rounded-lg md:px-48 md:py-16">
+            <main className="px-8 py-10">
+                <section className="mx-auto max-w-[736px] bg-black md:rounded-lg md:px-44 md:py-[4.5rem]">
                     <h2 className="text-3xl font-bold -tracking-wider md:pb-6 md:text-center md:text-5xl">
                         Log in to Spotify
                     </h2>
 
                     <div className="mt-8 flex flex-col gap-3 md:px-4">
-                        <LoginButton name="Google">
+                        <LoginButton btnName="Google" provider={"google"}>
                             <GoogleIcon />
                         </LoginButton>
                         <button className="flex items-center gap-2 rounded-full border border-neutral-400 px-5 py-3 pl-8 hover:border-neutral-100">
@@ -42,11 +44,35 @@ const LoginPage = () => {
 
                     <hr className="my-10 h-[0.05rem] w-full rounded-full border-neutral-800" />
 
-                    <button className="w-full rounded-full bg-green-500 py-3 font-extrabold text-black transition-all hover:scale-105">
-                        Log In
-                    </button>
+                    <LoginForm />
+
+                    <Link
+                        href={"#"}
+                        className="flex items-center justify-center py-7 text-center transition-all hover:text-green-500 hover:underline "
+                    >
+                        Forgot your password?
+                    </Link>
+
+                    <hr className="h-[0.05rem] w-full rounded-full border-neutral-800" />
+
+                    <p className="mt-16 flex w-full justify-center gap-1">
+                        <span>Don&apos;t have an account? </span>
+                        <Link
+                            href={"/signup"}
+                            className=" transition-all hover:text-green-500 hover:underline"
+                        >
+                            Sign up for Spotify
+                        </Link>
+                    </p>
                 </section>
             </main>
+
+            <footer className="grid h-full w-full place-items-center bg-neutral-950 py-10">
+                <p className="text-xs text-neutral-400">
+                    This site is protected by reCAPTCHA and the Google Privacy
+                    Policy and Terms of Service apply.
+                </p>
+            </footer>
         </div>
     );
 };

@@ -6,8 +6,6 @@ import { CircularStd } from "@/font-loader";
 import ProviderResizable from "@/provider/provider-resizable";
 import ProviderSession from "@/provider/provider-session";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Spotify Clone",
