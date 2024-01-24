@@ -27,7 +27,7 @@ const DailyMix = () => {
                 <h2 className="relative z-10 w-fit font-bold">Laulud</h2>
                 {isHovering && (
                     <PlayButton
-                        styles="bg-green-500 p-2 rounded-full z-10 transition-transform hover:scale-110"
+                        className="z-10 rounded-full bg-green-500 p-2 transition-transform hover:scale-110"
                         width={16}
                         height={16}
                     />
