@@ -2,6 +2,9 @@
 import PauseIcon from "@/icons/pause-icon";
 import PlayIcon from "@/icons/play-icon";
 import { useMusicStore } from "@/store/music";
+import { ButtonHTMLAttributes } from "react";
+
+interface btnProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 const PlayButton = ({
     bgColor = "bg-green-500",
