@@ -1,16 +1,18 @@
 "use client";
-import { signIn } from "next-auth/react";
+import { BuiltInProviderType } from "next-auth/providers/index";
+import { LiteralUnion, signIn } from "next-auth/react";
 import { ButtonHTMLAttributes } from "react";
 
 interface btnProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     btnName: string;
+    provider: LiteralUnion<BuiltInProviderType> | undefined;
 }
 
-const LoginButton = ({ btnName, ...props }: btnProps) => {
+const LoginButton = ({ btnName, provider, ...props }: btnProps) => {
     return (
         <button
             onClick={() =>
-                signIn("google", {
+                signIn(provider, {
                     callbackUrl: "/",
                 })
             }
