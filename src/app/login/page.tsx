@@ -25,12 +25,9 @@ const LoginPage = () => {
                         <LoginButton btnName="Google" provider={"google"}>
                             <GoogleIcon />
                         </LoginButton>
-                        <button className="flex items-center gap-2 rounded-full border border-neutral-400 px-5 py-3 pl-8 hover:border-neutral-100">
+                        <LoginButton btnName="Facebook" provider={"facebook"}>
                             <FacebookIconColor />
-                            <h5 className="w-full flex-1 text-center font-bold">
-                                Continue with Facebook
-                            </h5>
-                        </button>
+                        </LoginButton>
                         <button className="flex items-center gap-2 rounded-full border border-neutral-400 px-5 py-3 pl-8 hover:border-neutral-100">
                             <AppleIcon width={24} height={24} />
                             <h5 className="w-full flex-1 text-center font-bold">

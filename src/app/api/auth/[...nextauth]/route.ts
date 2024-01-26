@@ -1,19 +1,31 @@
 import { AuthOptions } from "next-auth";
 import NextAuth from "next-auth/next";
+import Facebook from "next-auth/providers/facebook";
 import Google from "next-auth/providers/google";
 
-const clientId = process.env.GOOGLE_ID;
-const clientSecret = process.env.GOOGLE_SECRET;
+const clientIdGoogle = process.env.GOOGLE_ID;
+const clientSecretGoogle = process.env.GOOGLE_SECRET;
 
-if (!clientId || !clientSecret) {
-    throw new Error("Missing enviroment variables");
+const clientIdFacebook = process.env.FACEBOOK_ID;
+const clientSecretFacebok = process.env.FACEBOOK_SECRET;
+
+if (!clientIdGoogle || !clientSecretGoogle) {
+    throw new Error("Missing enviroment variables for Google authentication");
+}
+
+if (!clientIdFacebook || !clientSecretFacebok) {
+    throw new Error("Missing enviroment variables for Facebook authentication");
 }
 
 const authOptions: AuthOptions = {
     providers: [
         Google({
-            clientId,
-            clientSecret,
+            clientId: clientIdGoogle,
+            clientSecret: clientSecretGoogle,
+        }),
+        Facebook({
+            clientId: clientIdFacebook,
+            clientSecret: clientSecretFacebok,
         }),
     ],
     secret: process.env.NEXTAUTH_SECRET,
