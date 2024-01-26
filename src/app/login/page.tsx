@@ -32,7 +32,7 @@ const LoginPage = () => {
                             </h5>
                         </button>
                         <button className="flex items-center gap-2 rounded-full border border-neutral-400 px-5 py-3 pl-8 hover:border-neutral-100">
-                            <AppleIcon />
+                            <AppleIcon width={24} height={24} />
                             <h5 className="w-full flex-1 text-center font-bold">
                                 Continue with Apple
                             </h5>
