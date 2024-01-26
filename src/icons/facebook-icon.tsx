@@ -1,17 +1,20 @@
-const FacebookIcon = ({ width = 16, height = 16 }) => {
-	return (
-		<svg
-			role="img"
-			width={width}
-			height={height}
-			aria-hidden="true"
-			viewBox="0 0 16 16"
-			data-encore-id="icon"
-			fill="currentColor"
-		>
-			<path d="M16 8a8 8 0 10-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0016 8z"></path>
-		</svg>
-	);
+import { svgProps } from "@/types";
+
+const FacebookIcon = ({ width = 16, height = 16, ...props }: svgProps) => {
+    return (
+        <svg
+            role="img"
+            width={width}
+            height={height}
+            aria-hidden="true"
+            viewBox="0 0 16 16"
+            data-encore-id="icon"
+            fill="currentColor"
+            {...props}
+        >
+            <path d="M16 8a8 8 0 10-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8.002 8.002 0 0016 8z"></path>
+        </svg>
+    );
 };
 
 export default FacebookIcon;

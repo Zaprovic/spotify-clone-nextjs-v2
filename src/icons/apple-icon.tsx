@@ -1,6 +1,4 @@
-import { SVGProps } from "react";
-
-interface svgProps extends SVGProps<SVGSVGElement> {}
+import { svgProps } from "@/types";
 
 const AppleIcon = ({ className, ...props }: svgProps) => {
     return (
