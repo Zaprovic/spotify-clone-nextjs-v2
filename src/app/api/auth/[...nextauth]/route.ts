@@ -6,20 +6,20 @@ const clientId = process.env.GOOGLE_ID;
 const clientSecret = process.env.GOOGLE_SECRET;
 
 if (!clientId || !clientSecret) {
-	throw new Error("Missing enviroment variables");
+    throw new Error("Missing enviroment variables");
 }
 
 const authOptions: AuthOptions = {
-	providers: [
-		Google({
-			clientId,
-			clientSecret,
-		}),
-	],
-	secret: process.env.NEXTAUTH_SECRET,
-	pages: {
-		signIn: "/login",
-	},
+    providers: [
+        Google({
+            clientId,
+            clientSecret,
+        }),
+    ],
+    secret: process.env.NEXTAUTH_SECRET,
+    pages: {
+        signIn: "/login",
+    },
 };
 
 const handler = NextAuth(authOptions);
